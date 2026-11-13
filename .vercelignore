@@ -1,0 +1,13 @@
+# 배포에는 정리기 화면(index.html · style.css · app.js · clean.js · lib/) · rules/ · data/ 만 올린다
+README.md
+.gitignore
+.vercelignore
+.claude/
+정리/
+정리본/
+진단/
+tools/
+
+# csv · xlsx 는 data/ 의 예시 파일만
+/*.csv
+/*.xlsx

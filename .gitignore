@@ -1,0 +1,18 @@
+# 배포 · 실행 부산물
+.vercel/
+node_modules/
+.env
+.env.*
+
+# 저장소에 올리지 않는 것
+tools/
+정리본/
+진단/
+.claude/
+
+# csv · xlsx 는 data/ 의 예시 파일만 올린다
+*.csv
+*.xlsx
+!data/
+!data/*.csv
+!data/*.xlsx

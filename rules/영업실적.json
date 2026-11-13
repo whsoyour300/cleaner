@@ -1,0 +1,38 @@
+{
+  "title": "영업실적 처리 규칙",
+  "file": "영업실적",
+  "owner": "사람이 정한 규칙입니다. 도구는 이대로 할 뿐입니다.",
+  "order_note": "병합된 팀 칸을 풀어 한 줄씩 같은 값으로 채운 뒤, 소계·총계 줄을 데이터에서 떼어 따로 검산합니다.",
+  "summary_rows": {
+    "group_by": "팀",
+    "sum_cols": [
+      "실적",
+      "건수"
+    ]
+  },
+  "columns": {
+    "팀": {
+      "trim": true,
+      "why": "A열 병합(요금팀 등)은 소계 앞 줄까지 같은 값 — 병합을 풀어 한 줄씩 팀 이름을 넣는다"
+    },
+    "실적": {
+      "strip_units": [
+        "원",
+        ","
+      ],
+      "number": true,
+      "negative": "exclude",
+      "why": "«93,520,000 원»에서 «원»과 쉼표를 지우고 숫자로"
+    },
+    "건수": {
+      "number": true,
+      "integer": true,
+      "negative": "exclude",
+      "why": "건수는 정수"
+    }
+  },
+  "duplicates": {
+    "action": "drop",
+    "why": "모든 열이 같은 행은 하나만 남긴다"
+  }
+}
