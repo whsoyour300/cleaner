@@ -16,3 +16,6 @@ tools/
 !data/
 !data/*.csv
 !data/*.xlsx
+
+.vercel
+.env*
